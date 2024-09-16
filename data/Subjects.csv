@@ -1,0 +1,104 @@
+ID,subject,level_id,department_id,credits,description,obligatory,facultative,lecturer_id
+1,Enchanter I,1,6,4,New enchantments are 10% stronger.,1,1,1
+2,Enchanter II,2,6,5,New enchantments are 20% stronger.,1,0,1
+3,Enchanter III,3,6,5,New enchantments are 30% stronger.,1,0,1
+4,Enchanter IV,4,6,8,New enchantments are 40% stronger.,1,0,1
+5,Enchanter V,5,6,10,New enchantments are 50% stronger.,0,0,1
+6,Fire Enchanter,2,6,2,Fire enchantments on weapons and armor are 25% stronger.,0,0,1
+7,Frost Enchanter,2,6,2,Frost enchantment s on weapons and armor are 25% stronger.,0,0,1
+8,Storm Enchanter,3,6,3,Shock enchantments on weapons and armor are 25% stronger.,0,0,1
+9,Extra Effect,5,6,6,Can put two enchantments on the same item.,0,0,1
+10,Insightful Enchanter,3,6,3,Skill enchantments on armor are 25% stronger.,0,0,1
+11,Corpus Enchanter,4,6,4,"Health, Magicka, and Stamina enchantments on armor are 25% stronger.",0,0,1
+12,Soul Squeezer,1,6,2,Soul gems provide extra magicka for recharging.,1,0,1
+13,Soul Siphon,2,6,3,"Death blows to creatures, but not people, trap 5% of the victim's soul, recharging the weapon.",0,0,1
+14,Novice Alteration,1,3,4,Cast Novice level Alteration spells for half magicka.,1,1,2
+15,Apprentice Alteration,2,3,5,Cast Apprentice level Alteration spells for half magicka.,1,0,2
+16,Adept Alteration,3,3,5,Cast Adept level Alteration spells for half magicka.,1,0,2
+17,Expert Alteration,4,3,8,Cast Expert level Alteration spells for half magicka.,1,0,2
+18,Master Alteration,5,3,10,Cast Master level Alteration spells for half magicka.,0,0,2
+19,Alteration Dual Casting,1,3,2,Dual casting an Alteration spell overcharges the effect into an even more powerful version.,0,0,2
+20,Mage Armor I,2,3,2,Protection spells like Stoneflesh are twice as strong if not wearing armor.,1,0,2
+21,Mage Armor II,3,3,3,Protection spells like Stoneflesh are twice as strong if not wearing armor.,0,0,2
+22,Mage Armor III,4,3,4,Protection spells like Stoneflesh are twice as strong if not wearing armor.,0,0,2
+23,Magic Resistance I,2,3,2,Blocks 10% of a spell's effects.,1,0,2
+24,Magic Resistance II,3,3,3,Blocks 10% of a spell's effects.,0,0,2
+25,Magic Resistance III,4,3,4,Blocks 10% of a spell's effects.,0,0,2
+26,Stability,4,3,3,Alteration Spells have greater duration.,0,0,2
+27,Atronach,5,3,4,Absorb 30% of the magicka of any spells that hit you.,0,0,2
+28,Novice Restoration,1,2,4,Cast Novice level Restoration spells for half magicka.,1,1,3
+29,Apprentice Restoration,2,2,3,Cast Apprentice level Restoration spells for half magicka.,1,0,3
+30,Adept Restoration,3,2,3,Cast Adept level Restoration spells for half magicka.,1,0,3
+31,Expert Restoration,4,2,3,Cast Expert level Restoration spells for half magicka.,1,0,3
+32,Master Restoration,5,2,5,Cast Master level Restoration spells for half magicka.,1,0,3
+33,Restoration Dual Casting,1,2,2,Dual casting an Restoration spell overcharges the effect into an even more powerful version.,0,0,3
+34,Respite,2,2,3,Healing spells also restore Stamina.,1,0,3
+35,Recovery I,2,2,2,Magicka regenerates 25% faster.,1,0,3
+36,Recovery II,3,2,2,Magicka regenerates 25% faster.,0,0,3
+37,Avoid Death,5,2,2,"Once a day, heals 250 points automatically if you fall below 10% health.",0,0,3
+38,Regeneration,1,2,3,Healing spells cure 50% more.,1,0,3
+39,Necromage,4,2,3,All spells are more effective against undead.,0,0,3
+40,Ward Absorb,3,2,5,Wards recharge your magicka when hit with spells.,0,0,3
+41,Novice Destruction,1,1,4,Cast Novice level Destruction spells for half magicka.,1,1,4
+42,Apprentice Destruction,2,1,5,Cast Apprentice level Destruction spells for half magicka.,1,0,4
+43,Adept Destruction,3,1,5,Cast Adept level Destruction spells for half magicka.,1,0,4
+44,Expert Destruction,4,1,8,Cast Expert level Destruction spells for half magicka.,1,0,4
+45,Master Destruction,5,1,10,Cast Master level Destruction spells for half magicka.,0,0,4
+46,Destruction Dual Casting,1,1,2,Dual casting an Destruction spell overcharges the effect into an even more powerful version.,1,0,4
+47,Impact,2,1,3,Most destruction spells will stagger an opponent when dual cast.,1,0,4
+48,Rune Master,2,1,2,Can place runes five times farther away.,0,0,4
+49,Augmented Shock I,2,1,3,Shock spells do 25% more damage,1,0,4
+50,Augmented Shock II,3,1,4,Shock spells do 25% more damage,0,0,4
+51,Disintegrate,4,1,6,Shock damage disintegrates targets if their health is low.,0,0,4
+52,Augmented Frost I,2,1,3,Frost spells do 25% more damage.,1,0,4
+53,Augmented Frost II,3,1,4,Frost spells do 25% more damage.,0,0,4
+54,Deep Freeze,4,1,6,Frost damage paralyzes targets if their health is low.,0,0,4
+55,Augmented Flames I,2,1,3,Fire spells do 25% more damage.,1,0,4
+56,Augmented Flames II,4,1,4,Fire spells do 25% more damage,0,0,4
+57,Intense Flames,4,1,6,Fire damage causes targets to flee if their health is low.,0,0,4
+58,Novice Conjuration,1,4,4,Cast Novice level Conjuration spells for half magicka.,1,1,5
+59,Apprentice Conjuration,2,4,5,Cast Apprentice level Conjuration spells for half magicka.,1,0,5
+60,Adept Conjuration,3,4,5,Cast Adept level Conjuration spells for half magicka.,1,0,5
+61,Expert Conjuration,4,4,8,Cast Expert level Conjuration spells for half magicka.,1,0,5
+62,Master Conjuration,5,4,10,Cast Master level Conjuration spells for half magicka.,0,0,5
+63,Summoner I,2,4,3,Can summon atronachs or raise undead twice as far away.,0,0,5
+64,Summoner II,4,4,3,Can summon atronachs or raise undead twice as far away.,0,0,5
+65,Atromancy,2,4,4,Double duration for conjured Atronachs.,0,0,5
+66,Elemental Potency,4,4,5,Conjured Atronachs are 50% more powerful,0,0,5
+67,Twin Souls,5,4,6,You can have two Atronachs or reanimated zombies.,0,0,5
+68,Conjuration Dual Casting,1,4,2,Dual casting an Conjuration spell overcharges the effect into an even more powerful version.,1,0,5
+69,Necromancy,2,4,3,Greater duration for reanimated undead.,1,0,5
+70,Dark Souls,4,4,4,Reanimated undead have 100 points more health.,0,0,5
+71,Mystic Binding,1,4,2,Bound weapons do more damage.,1,0,5
+72,Soul Stealer,2,4,3,Bound weapons cast Soul Trap on targets.,0,0,5
+73,Oblivion Binding,3,4,4,Bound weapons will banish summoned creatures and turn raised ones.,0,0,5
+74,Novice Illusion,1,5,4,Cast Novice level Illusion spells for half Magicka.,1,1,6
+75,Apprentice Illusion,2,5,5,Cast Apprentice level Illusion spells for half Magicka.,1,0,6
+76,Adept Illusion,3,5,5,Cast Adept level Illusion spells for half Magicka.,1,0,6
+77,Expert Illusion,4,5,8,Cast Expert level Illusion spells for half Magicka.,1,0,6
+78,Master Illusion,5,5,10,Cast Master level Illusion spells for half Magicka.,0,0,6
+79,Illusion Dual Casting,1,5,2,Dual casting an Illusion spell overcharges the effect into an even more powerful version.,1,0,6
+80,Hypnotic Gaze,2,5,3,Calm spells now work on higher level opponents. Cumulative with Kindred Mage and Animage.,1,0,6
+81,Aspect of Terror,3,5,3,Fear spells work on higher level opponents. Cumulative with Kindred Mage and Animage.,0,0,6
+82,Rage,4,5,4,Frenzy spells work on higher level opponents. Cumulative with Kindred Mage and Animage.,0,0,6
+83,Master of the Mind,5,5,6,"Illusion spells work on undead, daedra, and automatons.",0,0,6
+84,Animage,1,5,2,Illusion spells now work on higher level animals.,1,0,6
+85,Kindred Mage,2,5,3,Illusion spells work on higher level people.,0,0,6
+86,Quiet Casting,3,5,5,All spells you cast from any school of magic are silent to others.,0,1,6
+87,Dovahzul I,1,7,4,Learn the language of dragons.,0,1,7
+88,Dovahzul II,2,7,5,Learn the language of dragons.,0,1,7
+89,Dovahzul III,3,7,5,Learn the language of dragons.,0,1,7
+90,Dovahzul IV,4,7,6,Learn the language of dragons.,0,1,7
+91,Dovahzul V,5,7,6,Learn the language of dragons.,0,1,7
+92,Magic in Business I,1,7,2,Bartering with magical items is 20% easier.,0,1,8
+93,Magic in Business II,2,7,2,Bartering with magical items is 20% easier.,0,1,8
+94,Bookkeeping,1,7,3,Organize the books in the Aranaeum.,0,1,9
+95,History of Skyrim I,1,7,2,Learn the history of the Province of Skyrim.,0,1,9
+96,History of Skyrim II,2,7,2,Learn the history of the Province of Skyrim.,0,1,9
+97,Proscribed Experimentation,3,7,4,Conduct experiments with dangerous or volatile material.,0,1,5
+98,Defensive Magics,2,7,4,Wards and magical armor are 20% stronger.,0,1,2
+99,Excavation I,2,7,2,Excavate sites of importance to the college.,0,1,10
+100,Excavation II,3,7,2,Excavate sites of importance to the college.,0,1,10
+101,Ancient Magics,3,7,3,Study magics lost to time.,0,1,11
+102,The Elder Scrolls,4,7,6,Learn the effects and nature of the Elder Scrolls.,0,1,11
+103,Peculiar Magics,2,7,3,Study unusual or uncommon magics.,0,1,10
