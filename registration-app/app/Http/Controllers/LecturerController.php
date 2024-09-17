@@ -13,7 +13,8 @@ class LecturerController extends Controller
      */
     public function index()
     {
-        //
+        $lecturers = Lecturer::all();
+        return inertia('Lecturer', ['lecturers' => $lecturers]);
     }
 
     /**

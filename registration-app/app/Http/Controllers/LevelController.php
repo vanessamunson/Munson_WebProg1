@@ -13,7 +13,8 @@ class LevelController extends Controller
      */
     public function index()
     {
-        //
+        $levels = Level::all();
+        return inertia('Level', ['levels' => $levels]);
     }
 
     /**

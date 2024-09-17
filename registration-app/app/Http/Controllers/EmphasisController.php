@@ -13,7 +13,8 @@ class EmphasisController extends Controller
      */
     public function index()
     {
-        //
+        $emphases = Emphasis::all();
+        return inertia('Emphasis', ['emphases' => $emphases]);
     }
 
     /**
