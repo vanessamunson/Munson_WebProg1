@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Student;
-use App\Http\Requests\StoreStudentRequest;
-use App\Http\Requests\UpdateStudentRequest;
+use App\Models\SubjectEmphasis;
+use App\Http\Requests\StoreSubjectEmphasisRequest;
+use App\Http\Requests\UpdateSubjectEmphasisRequest;
 
-class StudentController extends Controller
+class SubjectEmphasisController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $students = Student::all();
-        return inertia('Home', ['students' => $students]);
+        //
     }
 
     /**
@@ -28,7 +27,7 @@ class StudentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreStudentRequest $request)
+    public function store(StoreSubjectEmphasisRequest $request)
     {
         //
     }
@@ -36,7 +35,7 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Student $student)
+    public function show(SubjectEmphasis $subjectEmphasis)
     {
         //
     }
@@ -44,7 +43,7 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Student $student)
+    public function edit(SubjectEmphasis $subjectEmphasis)
     {
         //
     }
@@ -52,7 +51,7 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateStudentRequest $request, Student $student)
+    public function update(UpdateSubjectEmphasisRequest $request, SubjectEmphasis $subjectEmphasis)
     {
         //
     }
@@ -60,7 +59,7 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Student $student)
+    public function destroy(SubjectEmphasis $subjectEmphasis)
     {
         //
     }
