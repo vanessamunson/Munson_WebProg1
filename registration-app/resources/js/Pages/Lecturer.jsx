@@ -1,3 +1,5 @@
+import { Link } from "@inertiajs/react";
+
 export default function Lecturer({lecturers}) {
     return (
         <>
@@ -18,6 +20,27 @@ export default function Lecturer({lecturers}) {
                         </tr>
                     ))}
                 </table>
+            </div>
+
+            <div>
+                {lecturers.links.map(link => (
+                    link.url ?
+                    <Link 
+                        href={link.url} 
+                        key={link.label} 
+                        dangerouslySetInnerHTML={{ __html: link.label }}
+                        className={`p-1 m-1 ${
+                            link.active ? "font-color: blue" : ""
+                        }`}
+                    />
+                    :
+                    <span
+                        key={link.label} 
+                        dangerouslySetInnerHTML={{ __html: link.label }}
+                        className={'p-1 m-1 text-slate-300'}
+                    >
+                    </span>
+                ))}
             </div>
         </>
     )

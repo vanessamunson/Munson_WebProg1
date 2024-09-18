@@ -13,7 +13,7 @@ class SubjectEmphasisController extends Controller
      */
     public function index()
     {
-        $subjectemphases = SubjectEmphasis::all();
+        $subjectemphases = SubjectEmphasis::paginate(10);
         return inertia('SubjectEmphasis', ['subjectemphases' => $subjectemphases]);
     }
 

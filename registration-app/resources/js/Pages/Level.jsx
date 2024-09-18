@@ -1,3 +1,5 @@
+import { Link } from "@inertiajs/react";
+
 export default function Level({levels}) {
     return (
         <>

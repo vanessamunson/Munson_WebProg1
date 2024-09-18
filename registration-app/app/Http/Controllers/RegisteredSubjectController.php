@@ -13,7 +13,7 @@ class RegisteredSubjectController extends Controller
      */
     public function index()
     {
-        $registeredsubjects = RegisteredSubject::all();
+        $registeredsubjects = RegisteredSubject::paginate(10);
         return inertia('RegisteredSubject', ['registeredsubjects' => $registeredsubjects]);
     }
 

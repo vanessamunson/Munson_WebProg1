@@ -13,8 +13,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::all();
-        return inertia('Home', ['students' => $students]);
+        $students = Student::paginate(10);
+        return inertia('Student', ['students' => $students]);
     }
 
     /**

@@ -13,7 +13,7 @@ class PreviousSubjectController extends Controller
      */
     public function index()
     {
-        $previoussubjects = PreviousSubject::all();
+        $previoussubjects = PreviousSubject::paginate(10);
         return inertia('PreviousSubject', ['previoussubjects' => $previoussubjects]);
     }
 

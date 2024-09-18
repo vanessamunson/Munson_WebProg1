@@ -1,3 +1,5 @@
+import { Link } from "@inertiajs/react";
+
 export default function Attendance({attendances}) {
     return (
         <>
@@ -8,7 +10,7 @@ export default function Attendance({attendances}) {
                         <th>Class</th>
                         <th>Attended</th>
                     </tr>
-                    {attendances.map(attendance => (
+                    {attendances.data.map(attendance => (
                         <tr key={attendance.id}>
                             <td>{attendance.attended}</td>
                             <td>{attendance.subjecttime_id}</td>
@@ -16,6 +18,27 @@ export default function Attendance({attendances}) {
                         </tr>
                     ))}
                 </table>
+            </div>
+
+            <div>
+                {attendances.links.map(link => (
+                    link.url ?
+                    <Link 
+                        href={link.url} 
+                        key={link.label} 
+                        dangerouslySetInnerHTML={{ __html: link.label }}
+                        className={`p-1 m-1 ${
+                            link.active ? "font-color: blue" : ""
+                        }`}
+                    />
+                    :
+                    <span
+                        key={link.label} 
+                        dangerouslySetInnerHTML={{ __html: link.label }}
+                        className={'p-1 m-1 text-slate-300'}
+                    >
+                    </span>
+                ))}
             </div>
         </>
     )

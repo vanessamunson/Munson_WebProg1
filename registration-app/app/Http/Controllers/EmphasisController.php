@@ -13,7 +13,7 @@ class EmphasisController extends Controller
      */
     public function index()
     {
-        $emphases = Emphasis::all();
+        $emphases = Emphasis::paginate(10);
         return inertia('Emphasis', ['emphases' => $emphases]);
     }
 

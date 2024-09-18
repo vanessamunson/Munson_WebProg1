@@ -13,7 +13,7 @@ class LecturerController extends Controller
      */
     public function index()
     {
-        $lecturers = Lecturer::all();
+        $lecturers = Lecturer::paginate(10);
         return inertia('Lecturer', ['lecturers' => $lecturers]);
     }
 

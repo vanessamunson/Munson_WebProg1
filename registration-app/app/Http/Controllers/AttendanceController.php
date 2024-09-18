@@ -13,7 +13,7 @@ class AttendanceController extends Controller
      */
     public function index()
     {
-        $attendances = Attendance::all();
+        $attendances = Attendance::paginate(10);
         return inertia('Attendance', ['attendances' => $attendances]);
     }
 

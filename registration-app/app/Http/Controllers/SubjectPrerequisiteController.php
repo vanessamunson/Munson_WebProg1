@@ -13,7 +13,7 @@ class SubjectPrerequisiteController extends Controller
      */
     public function index()
     {
-        $subjectprerequisite = SubjectPrerequisite::all();
+        $subjectprerequisite = SubjectPrerequisite::paginate(10);
         return inertia('SubjectPrerequisite', ['subjectprerequisite' => $subjectprerequisite]);
     }
 
