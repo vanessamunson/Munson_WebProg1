@@ -13,7 +13,8 @@ class SubjectTimeController extends Controller
      */
     public function index()
     {
-        //
+        $subjecttimes = SubjectTime::all();
+        return inertia('SubjectTime', ['subjecttimes' => $subjecttimes]);
     }
 
     /**

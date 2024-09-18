@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class SubjectTime extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'subject_id',
+        'day',
+        'start_time',
+        'end_time',
+    ];
+
 }

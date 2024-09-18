@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class SubjectPrerequisite extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'subject_id',
+        'prerequisite_id',
+    ];
+
 }
