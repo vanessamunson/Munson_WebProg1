@@ -40,7 +40,7 @@ Route::resource('previoussebject', PreviousSubjectController::class)->except('in
 Route::get('/registeredsubject', [RegisteredSubjectController::class, 'index']);
 Route::resource('registeredsubject', RegisteredSubjectController::class)->except('index');
 
-Route::get('/', [StudentController::class, 'index']);
+Route::get('/students', [StudentController::class, 'index']);
 Route::resource('students', StudentController::class)->except('index');
 
 Route::get('/subjects', [SubjectController::class, 'index']);
