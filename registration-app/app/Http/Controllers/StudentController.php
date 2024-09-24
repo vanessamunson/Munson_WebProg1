@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use App\Http\Requests\StoreStudentRequest;
 use App\Http\Requests\UpdateStudentRequest;
+use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
@@ -22,15 +23,27 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('CreateStudent');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreStudentRequest $request)
+    public function store(Request $request)
     {
-        //
+        $fields = $request->validate([
+            'name' => ['required'],
+            'race' => ['required'],
+            'hall' => [],
+            'username' => ['required', 'max:20', 'unique:students,username'],
+            'password' => ['required'],
+            'department_id' => ['required'],
+            'emphasis_id' => ['required'],
+        ]);
+
+        Student::create($fields);
+
+        return redirect('/students');
     }
 
     /**
@@ -52,7 +65,7 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateStudentRequest $request, Student $student)
+    public function update(Request $request, Student $student)
     {
         //
     }
