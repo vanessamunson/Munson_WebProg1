@@ -13,7 +13,7 @@ export default function Student({students}) {
                         <th>Hall</th>
                         <th>Department</th>
                     </tr>
-                    {students.map(student => (
+                    {students.data.map(student => (
                         <tr key={student.id}>
                             <td>{student.name}</td>
                             <td>{student.race}</td>
