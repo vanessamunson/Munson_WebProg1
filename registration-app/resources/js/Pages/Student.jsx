@@ -3,8 +3,6 @@ import { Link } from "@inertiajs/react";
 export default function Student({students}) {
     return (
         <>
-            <h1>Hello</h1>
-
             <div>
                 <table>
                     <tr>
