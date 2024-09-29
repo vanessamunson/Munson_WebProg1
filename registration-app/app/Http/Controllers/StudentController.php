@@ -37,8 +37,8 @@ class StudentController extends Controller
             'hall' => [],
             'username' => ['required', 'max:20', 'unique:students,username'],
             'password' => ['required'],
-            'department_id' => ['required'],
-            'emphasis_id' => ['required'],
+            'department_id' => ['required', 'min:1'],
+            'emphasis_id' => ['required', 'min:1'],
         ]);
 
         Student::create($fields);
