@@ -16,6 +16,8 @@ use App\Http\Controllers\SubjectPrerequisiteController;
 use App\Http\Controllers\SubjectTimeController;
 use Inertia\Inertia;
 
+Route::inertia('/', 'Cover');
+
 // Get controllers
 
     Route::get('/attendance', [AttendanceController::class, 'index']);
@@ -36,11 +38,11 @@ use Inertia\Inertia;
     Route::get('/levels', [LevelController::class, 'index']);
     Route::resource('levels', LevelController::class)->except('index');
 
-    Route::get('/previoussebject', [PreviousSubjectController::class, 'index']);
-    Route::resource('previoussebject', PreviousSubjectController::class)->except('index');
+    Route::get('/previoussubjects', [PreviousSubjectController::class, 'index']);
+    Route::resource('previoussubjects', PreviousSubjectController::class)->except('index');
 
-    Route::get('/registeredsubject', [RegisteredSubjectController::class, 'index']);
-    Route::resource('registeredsubject', RegisteredSubjectController::class)->except('index');
+    Route::get('/registeredsubjects', [RegisteredSubjectController::class, 'index']);
+    Route::resource('registeredsubjects', RegisteredSubjectController::class)->except('index');
 
     Route::get('/students', [StudentController::class, 'index']);
     Route::resource('students', StudentController::class)->except('index');
@@ -51,8 +53,8 @@ use Inertia\Inertia;
     Route::get('/subjectemphasis', [SubjectEmphasisController::class, 'index']);
     Route::resource('subjectemphasis', SubjectEmphasisController::class)->except('index');
 
-    Route::get('/subjectprerequisite', [SubjectPrerequisiteController::class, 'index']);
-    Route::resource('subjectprerequisite', SubjectPrerequisiteController::class)->except('index');
+    Route::get('/subjectprerequisites', [SubjectPrerequisiteController::class, 'index']);
+    Route::resource('subjectprerequisites', SubjectPrerequisiteController::class)->except('index');
 
     Route::get('/subjecttime', [SubjectTimeController::class, 'index']);
     Route::resource('subjecttime', SubjectTimeController::class)->except('index');
@@ -61,4 +63,3 @@ use Inertia\Inertia;
 
 
 
-// Route::inertia('/', 'Home');
