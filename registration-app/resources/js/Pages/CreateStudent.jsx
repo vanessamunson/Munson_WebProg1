@@ -1,6 +1,15 @@
 import { useForm } from "@inertiajs/react";
+import { useState } from "react";
 
 export default function CreateStudent() {
+
+    const [setDepartment] = useState("");
+    const [setEmphasis] = useState("");
+
+    const handleDepartmentChange = (e) => {
+        setDepartment(e.target.value);
+        setEmphasis("");
+    };
 
     const { data, setData, post, errors, processing } = useForm({
         name: "",
@@ -10,12 +19,17 @@ export default function CreateStudent() {
         password: "",
         department_id: 0,
         emphasis_id: 0
-    })
+    });
 
     function submit(e) {
         e.preventDefault();
         post("/students");
-    }
+    };
+
+    const onDeptChange = (e) => {
+        handleDepartmentChange(e);
+        setData("department_id", parseInt(e.target.value))
+    };
 
     return (
         <>
@@ -83,9 +97,8 @@ export default function CreateStudent() {
                             value={data.username}
                             onChange={e => setData('username', e.target.value)}
                         />
-                        <p class="text-gray-600 text-xs italic">Must be unique</p>
+                        {errors.username && <div>{errors.username}</div>}
                     </div>
-                    {errors.username && <div>{errors.username}</div>}
                 </div>
                 <div class="col-span-2 px-4">
                     <div class="w-full px-3">
@@ -99,9 +112,8 @@ export default function CreateStudent() {
                             value={data.password}
                             onChange={e => setData('password', e.target.value)}
                         />
-                        <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
+                        {errors.password && <div>{errors.password}</div>}
                     </div>
-                    {errors.password && <div>{errors.password}</div>}
                 </div>
                 <div class="px-4">
                     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -114,8 +126,9 @@ export default function CreateStudent() {
                             id="grid-department"
                             type="dropdown"
                             value={data.department_id}
-                            onChange={e => setData("department_id", parseInt(e.target.value))}
+                            onChange={e => onDeptChange(e)}
                         >
+                            <option value="">Select Major</option>
                             <option value="3">Alteration</option>
                             <option value="4">Conjuration</option>
                             <option value="1">Destruction</option>
@@ -141,19 +154,45 @@ export default function CreateStudent() {
                             type="dropdown"
                             value={data.emphasis_id}
                             onChange={e => setData("emphasis_id", parseInt(e.target.value))}
+                            disabled={data.department_id === 0}
                         >
-                            <option value="1">Destruction</option>
-                            <option value="2">Restoration</option>
-                            <option value="3">Soul Gems</option>
-                            <option value="4">Protection</option>
-                            <option value="5">Regeneration</option>
-                            <option value="6">Shock</option>
-                            <option value="7">Frost</option>
-                            <option value="8">Flames</option>
-                            <option value="9">Atronachs</option>
-                            <option value="10">Necromancy</option>  
-                            <option value="11">Bound Weaponry</option>  
-                            <option value="12">Will Bending</option>  
+                            <option value="">Select Emphasis</option>
+                            {(data.department_id === 6) && (
+                                <>
+                                    <option value="1">Destruction</option>
+                                    <option value="2">Restoration</option>
+                                    <option value="3">Soul Gems</option>
+                                </>
+                            )}
+                            {(data.department_id === 3) && (
+                                <>
+                                    <option value="4">Protection</option>
+                                </>
+                            )}
+                            {(data.department_id === 2) && (
+                                <>
+                                    <option value="5">Regeneration</option>
+                                </>
+                            )}
+                            {(data.department_id === 1) && (
+                                <>
+                                    <option value="6">Shock</option>
+                                    <option value="7">Frost</option>
+                                    <option value="8">Flames</option>
+                                </>
+                            )}
+                            {(data.department_id === 4) && (
+                                <>
+                                    <option value="9">Atronachs</option>
+                                    <option value="10">Necromancy</option>  
+                                    <option value="11">Bound Weaponry</option>
+                                </>  
+                            )}
+                            {(data.department_id === 5) && (
+                                <>
+                                    <option value="12">Will Bending</option>  
+                                </>
+                            )}
                         </select>
                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -166,5 +205,5 @@ export default function CreateStudent() {
                 </div>
             </form>
         </>
-    )
-} 
+    );
+};
