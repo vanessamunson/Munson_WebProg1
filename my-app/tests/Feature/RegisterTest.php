@@ -25,7 +25,7 @@ class RegisterTest extends TestCase
     ];
 
     // Make POST request to /register
-    $response = $this->post('/register', $data);
+    $response = $this->post('register', $data);
 
     // Assert the response status
     $response->assertStatus(201);
