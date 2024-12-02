@@ -7,15 +7,16 @@
 </p>
 
 <h2>Tools Used</h2>
+<p>I was required to show my knowledge of PHP, HTML, CSS, and optionally JavaScript in my project. In order to use PHP, my professor and I agreed that I could use Laravel.</p>
+<p>Stack:</p>
 <ul>
   <li>Laravel Breeze</li>
   <li>Inertia with React</li>
   <li>MySQL</li>
 </ul>
 <p>
-  I was required to show my knowledge of PHP, HTML, CSS, and optionally JavaScript in my project. In order to use PHP, my professor and I agreed that I could use Laravel. I have made projects 
-  with Laravel and Angular before, but I used React this time to gain experience with it since it's incredibly popular, and I could employ JavaScript. The database conenction was with 
-  MySQL because it's my favorite.
+  I have made projects with Laravel and Angular before, but I used React this time to gain experience with it since it's incredibly popular, and I could employ JavaScript. 
+  The database connection was with MySQL because it's my favorite.
 </p>
 
 <h2>Project Structure</h2>
@@ -28,21 +29,30 @@
 <h2>Functionality</h2>
 <p>This project includes CRUD methods for the main user and subject tables.</p>
 
-<h3>Logging In</h3>
+<h3>Users</h3>
+<h4>Logging In and Registration</h4>
 <p>
   If the user is signed in upon entry to the site, they will be directed to the dashboard. Otherwise, they will be prompted to either log in or sign up. When they log in, they can choose to stay signed 
-  in. If they sign up, they have multiple fields that are mandatory to fill, and their password will be hashed when it is stored.
+  in. If they sign up, they have multiple fields that are mandatory to fill, and their password will be hashed when it is stored. The user will get a session token that will keep them logged in.
 </p>
 
-<h3>Subject Registration/Deregistration</h3>
+<h4>Updating and Deletion</h4>
+<p>
+  The user can open a dropdown by hovering over their username in the top right of the navbar. From there, they can open a user dashboard where they can edit their information or 
+  delete their account. They can also simply log out from this dashboard.
+</p>
+
+<h3>Subjects</h3>
+<h4>Registration</h4>
 <p>
   After navigating to the "register for subject" section, the student can search for subjects to register for using filters at the top of the page. When no filters are chosen, the subjects 
   shown will be of any level either from the user's own department, or facultative courses from other departments. The results are paginated, so I had to make the filters stay across the page 
-  refresh as the user moves between the pages. The subjects are shown in rows in a table, and each row contains a button to let the student view the subejct to get more information. When this 
+  refresh as the user moves between the pages. The subjects are shown in rows in a table, and each row contains a button to let the student view the subject to get more information. When this 
   button is clicked, a modal will appear with the course's available times, its lecturer, and its entire description. This data is fetched by utilizing the table relationships defined within the models.
-  A user is unsable to register for a subject time if they already have.
+  A user is unable to register for a subject time if they already have.
 </p>
 
+<h4>Deregistration</h4>
 <p>
   If the student navigates to the "registered subjects" section, they can see a table of the subjects that they are currently registered for, and they have the option to deregister for them. 
   If they click the red "drop" button next to the subject they want to drop, then a modal will appear to confirm their selection. If they continue, then it will be dropped from the subject_times table.
