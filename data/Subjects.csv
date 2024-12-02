@@ -1,4 +1,4 @@
-ID,name,level_id,department_id,credits,description,obligatory,facultative,lecturer_id
+ID,name,level_id,dept_id,credits,description,obligatory,facultative,lecturer_id
 1,Enchanter I,1,6,4,New enchantments are 10% stronger.,1,1,1
 2,Enchanter II,2,6,5,New enchantments are 20% stronger.,1,0,1
 3,Enchanter III,3,6,5,New enchantments are 30% stronger.,1,0,1
