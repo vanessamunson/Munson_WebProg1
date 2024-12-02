@@ -60,8 +60,7 @@
 
 <h2>Future Updates</h2>
 <p>
-  I think that the controller and page for the main subjects table is a bit messy, so I'd like to improve them. I think I can combine some methods in the controller to make them less redundant. I am 
-  interested in expanding the functionality to include an admin login that can update students' grades and attendance. 
+  I think that the controller and page for the main subjects table is a bit messy, so I'd like to improve them. I think I can combine some methods in the controller to make them less redundant. I am also interested in expanding the functionality to include an admin login that can update students' grades and attendance. I would like to make more tests to cover all functions and cover edge cases. I will continue to work on this project incrementally because I think it's a lot of fun!
 </p>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
